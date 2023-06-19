@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Pi 5 Semestre Fatec ADS",
+    "short_name": "PI 5 Semestre",
+    "description": "A project made in Fatec Indaiatuba",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "portrait",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "512x512"
+        }
+    ]
+}

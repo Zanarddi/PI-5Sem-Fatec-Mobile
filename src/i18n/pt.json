@@ -1,0 +1,8 @@
+{
+    "title": "Aplicação em vários idiomas",
+    "home": "Início",
+    "user": "Meu nome é: {{name}}",
+    "login-welcome": "Faça login",
+    "login-button-google": "Continuar com google",
+    "lang-title": "Mudar idioma"
+}

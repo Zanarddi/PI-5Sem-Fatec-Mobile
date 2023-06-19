@@ -1,10 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import EN from './en/en.json';
-import PT from './pt/pt.json';
+import EN from './en.json';
+import PT from './pt.json';
 
 i18n.use(initReactI18next).init({
-  lng: "en",
+  lng: i18n.options.lng,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

@@ -1,0 +1,11 @@
+:root {
+  --main-bg-color: rgba(143, 191, 247, 0.808);
+}
+
+.app-containter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}

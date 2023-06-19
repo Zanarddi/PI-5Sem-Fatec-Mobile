@@ -4,9 +4,12 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <main>
-      <h1>{t("title")}</h1>
-      <span>{t("label")} </span>
-    </main>
+    <div>
+      <main>
+        <h1>{t("title")}</h1>
+        <span>{t("label")} </span>
+      </main>
+    </div>
+
   );
 };
