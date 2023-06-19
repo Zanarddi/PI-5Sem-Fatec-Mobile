@@ -1,26 +1,14 @@
-import React, { useContext } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { FirebaseContext } from '../contexts/FirebaseContext';
+import React from 'react';
 
-export type ProtectedRouteProps = {
-  isAuthenticated: boolean;
-  authenticationPath: string;
-  outlet: JSX.Element;
-};
-
-export function ProtectedRoute({ redirectTo, component, isAuthenticated, ...rest }: any) {
-  
-  const routeComponent;
+export function ProtectedRoute({ children, ...props }: { children: any, props: any }) {
+  const { user, setUser } = React.useContext(FirebaseContext);
   if (user == null) {
-    navigate('/');
-  } else{
-    React.createElement(component, props)
+    console.log("ProtectedRoute: user is null");
   }
-  const routeComponent = (props: any) => (
-    isAuthenticated
-      ? React.createElement(component, props)
-      : <Redirect to={{ pathname: '/login' }} />
-  );
-  return <Route {...rest} render={routeComponent} />;
+  let isAuthenticated = user != null;
+  console.log("ProtectedRoute: isAuthenticated: " + isAuthenticated);
+  
+  return isAuthenticated ? children : <Navigate to={{ pathname: '/' }} />
 }

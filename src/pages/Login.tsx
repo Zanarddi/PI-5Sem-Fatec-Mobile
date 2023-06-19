@@ -19,8 +19,9 @@ export const Login = () => {
   }
 
   const signInWithGoogle = () => {
-    signInWithPopup(auth, provider).then((result) => {
-      setUser(result.user);
+    signInWithPopup(auth, provider).then(async (result) => {
+      await setUser(result.user);
+      navigate('/home');
     }).catch((error) => {
       console.log(error);
     });
