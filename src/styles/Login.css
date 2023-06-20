@@ -17,20 +17,8 @@
 }
 
 #login-button-google{
-    display: flex;
-    position: relative;
-    padding: 0 12px 0 0px;
-    background: #fff;
-    align-items: center;
-    font-size: 16px;
-    font-family: inherit;
-    height: 52px;
-    border: 1px solid #c2c8d0;
-    border: 4px;
-    border-radius: 3px;
-    color: #2d333a;
-    outline: 0;
-    transition: box-shadow .15s ease-in-out,background-color .15s ease-in-out;
+    font-size: large;
+    color: ;
 }
 
 #login-lang-icon{
@@ -38,7 +26,7 @@
     position: absolute;
     right: 0;
     padding: 0 12px 0 0px;
-    background: #1bddff;
+    background: #a5a5a5;
     align-items: center;
     font-size: 16px;
     font-family: inherit;

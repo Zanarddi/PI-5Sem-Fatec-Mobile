@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import '../styles/Lang.css'
 import { LANGUAGES } from '../constants';
 import { useContext } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { useNavigate } from "react-router-dom";
+
+import '../styles/Lang.css'
 
 export const Lang = () => {
     const navigate = useNavigate();
