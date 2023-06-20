@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Lang } from "./pages/Lang";
 import { Home } from "./pages/Home";
+import { Documentation } from "./pages/Documentation";
 import { GlobalContext } from "./contexts/GlobalContext";
 import { FirebaseContext } from "./contexts/FirebaseContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
@@ -25,6 +26,9 @@ const App = () => {
             <Route path="/lang" element={<Lang />} />
             <Route path="/home" element={<ProtectedRoute props={undefined}>
               <Home />
+            </ProtectedRoute>} />
+            <Route path="/documentation" element={<ProtectedRoute props={undefined}>
+              <Documentation />
             </ProtectedRoute>} />
           </Routes>
         </BrowserRouter>

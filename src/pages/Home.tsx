@@ -10,8 +10,11 @@ import Button from '@mui/material/Button';
 import { Parking } from "../components/Parking";
 import Stack from '@mui/material/Stack';
 import { auth, provider } from "../service/firebase";
+import { useNavigate } from "react-router-dom";
+
 
 export const Home = () => {
+  const navigate = useNavigate();
   const { user, setUser } = React.useContext(FirebaseContext);
   const { t } = useTranslation();
 
@@ -87,7 +90,7 @@ export const Home = () => {
     <div className="app-container">
       <div className="home-page">
         <div className="home-side-bar-container">
-          <Sidebar className="home-side-bar" width="80%" breakPoint="always" onBackdropClick={() => setToggled(false)} toggled={toggled}>
+          <Sidebar style={{background: '#0E2954'}} className="home-side-bar" width="80%" breakPoint="always" onBackdropClick={() => setToggled(false)} toggled={toggled}>
             <img id='home-user-photo' src={user!.photoURL!} alt='user photo'></img>
             <h1>{t("home-side-bar-welcome")}</h1>
             <h1>{user!.displayName}</h1>
