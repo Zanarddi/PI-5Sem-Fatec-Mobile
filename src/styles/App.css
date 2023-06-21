@@ -1,5 +1,9 @@
 :root {
   --main-bg-color: rgba(255, 255, 255, 0.808);
+  --color-1: #68BBE3;
+  --color-2: #0E86D4;
+  --color-3: #055C9D;
+  --color-4: #003060;
 }
 
 .app-containter {

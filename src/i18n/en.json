@@ -11,5 +11,10 @@
     "home-side-bar-logout": "Logout",
     "home-your-parkings": "Your parkings",
     "home-main-header": "It's time to park!",
-    "home-no-parkings": "You don't have any parkings yet"
+    "home-no-parkings": "You don't have any parkings yet",
+    "home-add-parking-title": "Add new parking",
+    "home-add-parking-content": "To add a new parking, enter the parking id",
+    "home-add-parking-label": "Parking id",
+    "home-add-parking-cancel": "Cancel",
+    "home-add-parking-add": "Add"
 }

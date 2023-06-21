@@ -12,10 +12,13 @@ export interface IParking {
 }
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#1A2027',
     ...theme.typography.body2,
     textAlign: 'start',
-    color: theme.palette.text.secondary,
+    color: 'var(--color-1)',
+    fontWeight: 'bold',
+    fontSize: '1.1em',
+    // color: theme.palette.text.secondary,
     paddingTop: '1.5em',
     paddingBottom: '1.5em',
     paddingLeft: '1em',

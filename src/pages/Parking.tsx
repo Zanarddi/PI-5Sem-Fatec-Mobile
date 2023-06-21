@@ -61,10 +61,10 @@ export const Parking = () => {
 
   return (
     <div className="app-container">
-      <IconButton sx={{ fontSize: "large" }} id="parking-icon-back" onClick={() => navigate(-1)} >
-        <ArrowBackIcon sx={{ fontSize: 36 }} />
-      </IconButton>
       <div className="parking-container">
+      <IconButton  sx={{ fontSize: "large" }} id="parking-icon-back" onClick={() => navigate(-1)} >
+        <ArrowBackIcon style={{color:'var(--color-1)'}}sx={{ fontSize: 36 }} />
+      </IconButton>
         <div className="parking-header">
           <h1>{parkingSpots?.name}</h1>
           <p>CEP: {parkingSpots?.cep}, nº:{parkingSpots?.numero}</p>

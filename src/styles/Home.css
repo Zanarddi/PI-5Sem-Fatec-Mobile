@@ -9,9 +9,6 @@
     justify-content: flex-start;
 }
 
-.home-side-bar {
-    
-}
 .home-side-bar-container {
     position: absolute;
     top: 0;
@@ -21,15 +18,16 @@
     width: 100%;
     flex: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    justify-items: flex-end;
     font-size: larger;
     text-align: center;
+    color: var(--color-1);
 }
 
 .home-side-bar-container h1 {
     padding-left: 5%;
     padding-right: 5%;
-    color: #0E2954;
 }
 
 .div-spacer {
@@ -37,9 +35,11 @@
 }
 
 #home-slidebar-icon {
-    position: absolute;
-    top: 1%;
-    right: 2%;
+
+}
+
+#home-new-button{
+
 }
 
 #home-user-photo {
@@ -47,13 +47,24 @@
     border-radius: 30%;
     height: 15vh;
     width: 15vh;
+    border: 0.3em solid var(--color-2);
 }
 #home-logout-button {
-    margin-top: 90%;
+    margin-top: 100%;
+}
+
+.home-sidebar-body{
+    height: 100%;
+
+}
+
+.css-ewdv3l{
+    height: 100%;
 }
 
 .home-main-container{
-    background-color: rgb(245, 253, 255);
+    color: var(--color-4);
+    background-color: var(--color-2);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -66,7 +77,10 @@
 .home-main-header{
     margin-top: 2%;
     padding-left: 5%;
+    width: 90%;
+    max-width: 100vw;
 }
+
 .home-main-body{
     padding-left: 5%;
     width: 90%;
@@ -77,4 +91,18 @@
     padding: 10%;
     font-size: larger;
     text-align: left;
+}
+
+.home-main-body-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-main-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

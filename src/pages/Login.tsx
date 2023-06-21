@@ -1,7 +1,6 @@
 import './../styles/Login.css';
 import { useNavigate } from "react-router-dom";
 import logo from './../icons/logo.png';
-import { ReactComponent as LangSvg } from './../icons/lang.svg';
 import { signInWithPopup } from "firebase/auth";
 import { FirebaseContext } from '../contexts/FirebaseContext';
 import { auth, provider } from "../service/firebase";
@@ -42,7 +41,10 @@ export const Login = () => {
           <LanguageIcon sx={{ fontSize: 50 }} />
         </IconButton>
         <h1>{t("login-welcome")}</h1>
-        <Button id='login-button-google' color='info' variant="outlined" onClick={signInWithGoogle} startIcon={<GoogleIcon />}>
+        <Button style={{
+          color: 'var(--color-1)',
+          backgroundColor: '#242424',
+        }} id='login-button-google' color='info' variant="outlined" onClick={signInWithGoogle} startIcon={<GoogleIcon />}>
           {t("login-button-google")}
         </Button>
       </div>
