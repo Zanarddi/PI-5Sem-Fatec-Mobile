@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { ParkingSpot, ParkingSpotProps } from "../components/ParkingSpot";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-
 import '../styles/Parking.css'
 
 import { useParams } from 'react-router-dom';
