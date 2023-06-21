@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { FirebaseContext } from '../contexts/FirebaseContext';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import { Link } from 'react-router-dom';
-import '../styles/Home.css'
-import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton } from "@mui/material";
-import Button from '@mui/material/Button';
-import { Parking } from "../components/Parking";
-import Stack from '@mui/material/Stack';
-import { auth, provider } from "../service/firebase";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Sidebar, Menu } from 'react-pro-sidebar';
+import { IconButton } from "@mui/material";
+import { Parking } from "../components/Parking";
+import { auth } from "../service/firebase";
+import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
+import Stack from '@mui/material/Stack';
+import { FirebaseContext } from '../contexts/FirebaseContext';
 
+import '../styles/Home.css'
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -19,44 +18,18 @@ export const Home = () => {
   const { t } = useTranslation();
 
   const getUser = () => {
-    auth.currentUser?.getIdToken(true).then((idToken) => {
+    auth.currentUser?.getIdToken(true).then(() => {
     }).catch((error) => {
       console.log(error);
     });
   }
 
   //state to control sidebar
-  const [toggled, setToggled] = React.useState(true);
+  const [toggled, setToggled] = React.useState(false);
   const [parkings, setParkings] = React.useState([]);
 
   useEffect(() => {
-    getParkings().then((data) => {
-      console.log(data);
-      console.log('parkings :');
-      setParkings(data!);
-      console.log(parkings);
-    });
-    // const sampleData: any[] = [
-    //   {
-    //     "parkingSpots": [],
-    //     "id": 4,
-    //     "name": "FATEC Indaiatuba",
-    //     "cep": "13334-100",
-    //     "numero": 65,
-    //     "codConvite": null
-    //   },
-    //   {
-    //     "parkingSpots": [],
-    //     "id": 5,
-    //     "name": "FATEC Indaiatuba2",
-    //     "cep": "13334-100",
-    //     "numero": 65,
-    //     "codConvite": null
-    //   }
-    // ];
-    // setParkings(sampleData as never);
-    // console.log(parkings);
-
+    getParkings();
   }, []);
 
   const getParkings = async () => {
@@ -75,12 +48,12 @@ export const Home = () => {
       },
       body: JSON.stringify({ email: auth.currentUser?.email, token: idToken })
     };
-    console.log(`${process.env.REACT_APP_API_URL}/mobile/parking/get`);
     const response = await fetch(`${process.env.REACT_APP_API_URL}/mobile/parking/get`, requestOptions)
-      .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => { return data.json() })
+      // .then(data => console.log('data -> ' + data))
       .catch(error => console.log(error));
     console.log(response);
+    setParkings(response);
     return response;
   }
 
@@ -89,41 +62,40 @@ export const Home = () => {
   return (
     <div className="app-container">
       <div className="home-page">
-        <div className="home-side-bar-container">
-          <Sidebar style={{background: '#0E2954'}} className="home-side-bar" width="80%" breakPoint="always" onBackdropClick={() => setToggled(false)} toggled={toggled}>
-            <img id='home-user-photo' src={user!.photoURL!} alt='user photo'></img>
-            <h1>{t("home-side-bar-welcome")}</h1>
-            <h1>{user!.displayName}</h1>
-            <Menu
-              menuItemStyles={{
-                button: ({ level, active, disabled }) => {
-                  // only apply styles on first level elements of the tree
-                  if (level === 0)
-                    return {
-                      color: disabled ? 'red' : '#0E2954',
-                      backgroundColor: active ? '#eecef9' : undefined,
-                    };
-                  else
-                    return {
-                      color: disabled ? '5A96E3' : '#1F6E8C',
-                      backgroundColor: active ? '#eecef9' : undefined,
-                    };
-                },
-              }}
-            >
-              <MenuItem component={<Link to="/home" />}> Home</MenuItem>
-              <MenuItem component={<Link to="/documentation" />}> Documentation</MenuItem>
-              <SubMenu label="Charts">
-                <MenuItem> item 1 </MenuItem>
-                <MenuItem> item 2 </MenuItem>
-              </SubMenu>
-              <MenuItem onClick={getUser}> Item 3 </MenuItem>
-            </Menu>
-            <Button id='home-logout-button' color='info' variant="outlined" onClick={() => setUser(null)}>
-              {t("home-side-bar-logout")}
-            </Button>
-          </Sidebar>
-        </div>
+        <Sidebar style={{
+          background: '#0E2954'
+        }} className="home-side-bar-container" width="80%" breakPoint="always" onBackdropClick={() => setToggled(false)} toggled={toggled}>
+          <img id='home-user-photo' src={user!.photoURL!} alt='user photo'></img>
+          <h1>{t("home-side-bar-welcome")}</h1>
+          <h1>{user!.displayName}</h1>
+          <Menu
+            menuItemStyles={{
+              button: ({ level, active, disabled }) => {
+                // only apply styles on first level elements of the tree
+                if (level === 0)
+                  return {
+                    color: disabled ? 'red' : '#0E2954',
+                    backgroundColor: active ? '#eecef9' : undefined,
+                  };
+                else
+                  return {
+                    color: disabled ? '5A96E3' : '#1F6E8C',
+                    backgroundColor: active ? '#eecef9' : undefined,
+                  };
+              },
+            }}
+          >
+          </Menu>
+          <Button id='home-logout-button' 
+          color='info' variant="outlined" 
+          style={{
+            color: '#0E2954',
+            borderColor: '#0E2954'
+          }}
+          onClick={() => setUser(null)}>
+            {t("home-side-bar-logout")}
+          </Button>
+        </Sidebar>
         <IconButton id="home-slidebar-icon" onClick={() => setToggled(!toggled)} >
           <MenuIcon sx={{ fontSize: 40 }} />
         </IconButton>

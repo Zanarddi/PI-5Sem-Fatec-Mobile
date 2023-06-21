@@ -9,3 +9,14 @@
     align-items: center;
     justify-content: space-around;
 }
+
+#lang-select{
+}
+#lang-select-label{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+#lang-select-wrapper{
+    width: 50%;
+}

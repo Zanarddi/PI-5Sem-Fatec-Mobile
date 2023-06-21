@@ -1,6 +1,8 @@
 {
     "title": "Multi-language app",
     "home": "Home",
+    "language": "Language",
+    "return": "Return",
     "user": "My name is: {{name}}",
     "login-welcome": "Please login",
     "login-button-google": "Continue with Google",

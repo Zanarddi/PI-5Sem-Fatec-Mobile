@@ -1,0 +1,68 @@
+.parking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(231, 231, 231);
+    width: 100vw;
+    height: 100vh;
+}
+
+.parking-header {
+    width: 90%;
+}
+
+.parking-header p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.parking-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.parking-map {
+    position: relative;
+    display: absolute;
+    border-color: black;
+    border-radius: 3px;
+    border-style: outset;
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+    overflow: auto;
+}
+
+#parking-icon-back {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+.parking-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.parking-image-wrapper {
+    width: max-content;
+    height: max-content;
+}
+
+.parking-spot{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parking-spot h1{
+    padding: 0;
+}

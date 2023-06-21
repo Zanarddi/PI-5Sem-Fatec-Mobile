@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 
 export interface IParking {
     parkingSpots: any[];
@@ -23,9 +24,15 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 export const Parking = (parking: any) => {
-    console.log(parking.name);
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/parking/${parking.parking.id}`);
+    }
+
     let parkingtmp: IParking = parking.parking;
     return (
-        <Item className='home-parking'>{parkingtmp.name}</Item>
+        <Item onClick={handleClick} className='home-parking'>{parkingtmp.name}</Item>
     )
 }
