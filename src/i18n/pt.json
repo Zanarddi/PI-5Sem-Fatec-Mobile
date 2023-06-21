@@ -1,8 +1,20 @@
 {
-    "title": "Aplicação em vários idiomas",
+    "title": "Aplicação multi-idioma",
     "home": "Início",
+    "language": "Idioma",
+    "return": "Voltar",
     "user": "Meu nome é: {{name}}",
-    "login-welcome": "Faça login",
-    "login-button-google": "Continuar com google",
-    "lang-title": "Mudar idioma"
+    "login-welcome": "Por favor, faça login",
+    "login-button-google": "Continuar com o Google",
+    "lang-title": "Alterar idioma",
+    "home-side-bar-welcome": "Bem-vindo",
+    "home-side-bar-logout": "Sair",
+    "home-your-parkings": "Seus estacionamentos",
+    "home-main-header": "É hora de estacionar!",
+    "home-no-parkings": "Você ainda não possui nenhum estacionamento",
+    "home-add-parking-title": "Adicionar novo estacionamento",
+    "home-add-parking-content": "Para adicionar um novo estacionamento, insira o ID do estacionamento",
+    "home-add-parking-label": "ID do estacionamento",
+    "home-add-parking-cancel": "Cancelar",
+    "home-add-parking-add": "Adicionar"
 }

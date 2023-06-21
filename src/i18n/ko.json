@@ -1,0 +1,20 @@
+{
+  "title": "다국어 앱",
+  "home": "홈",
+  "language": "언어",
+  "return": "돌아가기",
+  "user": "제 이름은: {{name}}",
+  "login-welcome": "로그인해주세요",
+  "login-button-google": "Google 계정으로 계속하기",
+  "lang-title": "언어 변경",
+  "home-side-bar-welcome": "환영합니다",
+  "home-side-bar-logout": "로그아웃",
+  "home-your-parkings": "귀하의 주차 공간",
+  "home-main-header": "주차할 시간입니다!",
+  "home-no-parkings": "아직 주차 공간이 없습니다",
+  "home-add-parking-title": "새 주차 공간 추가",
+  "home-add-parking-content": "새 주차 공간을 추가하려면 주차 공간 ID를 입력하세요",
+  "home-add-parking-label": "주차 공간 ID",
+  "home-add-parking-cancel": "취소",
+  "home-add-parking-add": "추가"
+}

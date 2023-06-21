@@ -1,0 +1,20 @@
+{
+  "title": "Multilinguale App",
+  "home": "Startseite",
+  "language": "Sprache",
+  "return": "Zurück",
+  "user": "Mein Name ist: {{name}}",
+  "login-welcome": "Bitte einloggen",
+  "login-button-google": "Mit Google fortfahren",
+  "lang-title": "Sprache ändern",
+  "home-side-bar-welcome": "Willkommen",
+  "home-side-bar-logout": "Abmelden",
+  "home-your-parkings": "Ihre Parkplätze",
+  "home-main-header": "Es ist Zeit zum Parken!",
+  "home-no-parkings": "Sie haben noch keine Parkplätze",
+  "home-add-parking-title": "Neuen Parkplatz hinzufügen",
+  "home-add-parking-content": "Geben Sie die Parkplatz-ID ein, um einen neuen Parkplatz hinzuzufügen",
+  "home-add-parking-label": "Parkplatz-ID",
+  "home-add-parking-cancel": "Abbrechen",
+  "home-add-parking-add": "Hinzufügen"
+}

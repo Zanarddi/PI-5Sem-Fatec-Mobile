@@ -1,0 +1,20 @@
+{
+  "title": "マルチ言語アプリ",
+  "home": "ホーム",
+  "language": "言語",
+  "return": "戻る",
+  "user": "私の名前は{{name}}です",
+  "login-welcome": "ログインしてください",
+  "login-button-google": "Googleで続行",
+  "lang-title": "言語を変更",
+  "home-side-bar-welcome": "ようこそ",
+  "home-side-bar-logout": "ログアウト",
+  "home-your-parkings": "駐車場",
+  "home-main-header": "駐車の時間です！",
+  "home-no-parkings": "まだ駐車場がありません",
+  "home-add-parking-title": "新しい駐車場を追加",
+  "home-add-parking-content": "新しい駐車場を追加するには、駐車場のIDを入力してください",
+  "home-add-parking-label": "駐車場のID",
+  "home-add-parking-cancel": "キャンセル",
+  "home-add-parking-add": "追加"
+}
